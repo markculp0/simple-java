@@ -9,7 +9,8 @@ No Starch Press
 mvn archetype:generate -DgroupId=mc.hilo \
   -DartifactId=HiLo \
   -Dpackage=mc.hilo \
-  -Dversion=1.0-simple
+  -Dversion=1.0-simple \
+  -DinteractiveMode=false  
 
 ### Edit App.java
 
