@@ -4,6 +4,6 @@
 
 javac -encoding UTF-8 APlusB.java
 
-java -Xmx 1024m APlusB
+java -Xmx1024m APlusB
 
 
