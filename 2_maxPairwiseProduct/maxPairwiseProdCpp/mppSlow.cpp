@@ -1,15 +1,17 @@
+// Maximum Pairwise Product : Slow
+
 #include <iostream>
 #include <vector>
 #include <algorithm>
 
-int MaxPairwiseProduct(const std::vector<int>& numbers) {
-    int max_product = 0;
+long long MaxPairwiseProduct(const std::vector<int>& numbers) {
+    long long max_product = 0;
     int n = numbers.size();
 
     for (int first = 0; first < n; ++first) {
         for (int second = first + 1; second < n; ++second) {
             max_product = std::max(max_product,
-                numbers[first] * numbers[second]);
+                ((long long)numbers[first]) * numbers[second]);
         }
     }
 
@@ -23,7 +25,9 @@ int main() {
     for (int i = 0; i < n; ++i) {
         std::cin >> numbers[i];
     }
-
-    std::cout << MaxPairwiseProduct(numbers) << "\n";
+    
+    long long result = MaxPairwiseProduct(numbers);
+  
+    std::cout <<  result << "\n";
     return 0;
 }
