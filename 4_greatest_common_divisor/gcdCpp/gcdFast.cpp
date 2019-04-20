@@ -27,7 +27,6 @@ int gcd_call_fast(int a, int b) {
     return 1;
   else
     return gcd_fast(a, b);
-  
 }
 
 int main() {
