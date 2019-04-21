@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class Fibonacci {
+public class FibonacciSlow {
   private static long calc_fib(int n) {
     if (n <= 1)
       return n;
