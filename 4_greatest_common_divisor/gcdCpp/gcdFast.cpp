@@ -1,18 +1,7 @@
 
 #include <iostream>
 
-int gcd_naive(int a, int b) {
-  int current_gcd = 1;
-  for (int d = 2; d <= a && d <= b; d++) {
-    if (a % d == 0 && b % d == 0) {
-      if (d > current_gcd) {
-        current_gcd = d;
-      }
-    }
-  }
-  return current_gcd;
-}
-
+// Recursive algorithm
 int gcd_fast(int a, int b) {
   
   if (b == 0)
@@ -21,7 +10,7 @@ int gcd_fast(int a, int b) {
   return gcd_fast(b, a % b); 
 }
 
-
+// Calling function
 int gcd_call_fast(int a, int b) {
   if ((a == 0) || (b == 0))
     return 1;

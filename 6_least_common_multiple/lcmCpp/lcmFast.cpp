@@ -1,16 +1,7 @@
 
 #include <iostream>
 
-/*
-long long lcm_naive(int a, int b) {
-  for (long l = 1; l <= (long long) a * b; ++l)
-    if (l % a == 0 && l % b == 0)
-      return l;
-
-  return (long long) a * b;
-}
-*/
-
+// Greatest Common Divisor
 long long gcd_fast(int a, int b) {
   
   if (b == 0)
@@ -19,6 +10,7 @@ long long gcd_fast(int a, int b) {
   return (long long) gcd_fast(b, a % b); 
 }
 
+// Least common multiple
 long long lcm_fast(int a, int b) {
   
   if ((a == 0) || (b == 0))
