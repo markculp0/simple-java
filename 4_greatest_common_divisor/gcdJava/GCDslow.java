@@ -1,6 +1,6 @@
 import java.util.*;
 
-public class GCD {
+public class GCDslow {
   private static int gcd_naive(int a, int b) {
     int current_gcd = 1;
     for(int d = 2; d <= a && d <= b; ++d) {
