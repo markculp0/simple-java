@@ -1,6 +1,6 @@
 import java.util.*;
 
-public class FibonacciLastDigit {
+public class FibonacciLastDigitSlow {
     private static int getFibonacciLastDigitNaive(int n) {
         if (n <= 1)
             return n;
