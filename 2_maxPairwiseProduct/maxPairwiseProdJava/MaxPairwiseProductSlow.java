@@ -1,15 +1,15 @@
 import java.util.*;
 import java.io.*;
 
-public class MaxPairwiseProduct {
+public class MaxPairwiseProductSlow {
     static int getMaxPairwiseProduct(int[] numbers) {
         int max_product = 0;
         int n = numbers.length;
 
         for (int first = 0; first < n; ++first) {
             for (int second = first + 1; second < n; ++second) {
-                max_product = max(max_product,
-                    numbers[first] * numbers[second])
+                max_product = Math.max(max_product,
+                    numbers[first] * numbers[second]);
             }
         }
 

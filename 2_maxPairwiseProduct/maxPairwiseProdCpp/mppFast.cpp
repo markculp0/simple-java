@@ -37,6 +37,6 @@ int main() {
     // Get result from fn call
     long long result = MaxPairwiseProduct(numbers);
   
-    std::cout <<  result << "\n";
+    std::cout << result << "\n";
     return 0;
 }
