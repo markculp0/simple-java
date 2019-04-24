@@ -1,6 +1,6 @@
 import java.util.*;
 
-public class LCM {
+public class LCMslow {
   private static long lcm_naive(int a, int b) {
     for (long l = 1; l <= (long) a * b; ++l)
       if (l % a == 0 && l % b == 0)
