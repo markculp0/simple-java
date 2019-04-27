@@ -22,13 +22,27 @@ Output: The maximal value of fractions of items that fit into the knapsack.
 -----------------------------------------
 Input:            |   Input:
 3 50              |   1 10
-60 20             |   500 30
+60 20             |   500 30  (val, wt)
 100 50            |
 120 30            |
                   |
 Output:           |   Output:
 180.0000          |   166.6667
 (1st & 3rd item)  |   (1/3 of avail item)
+-----------------------------------------
+Input:
+2 10        2 10
+
+10 5        10 5
+10 5        15 5
+
+Output (w debug state): 
+
+v  w  wv    v   w   wv
+10 5 = 2    10  5  = 2
+10 5 = 2    15  5  = 3
+
+20          25
 -----------------------------------------
 
 </pre>
