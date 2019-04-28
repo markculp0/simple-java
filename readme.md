@@ -8,3 +8,6 @@ A collection of simple Java Apps
 4. Greatest Common Divisor
 5. Last Digit of Large Fibonacci Number
 6. Least Common Multiple
+7. Money Change
+8. Fractional Knapsack
+9. Car Fuel
