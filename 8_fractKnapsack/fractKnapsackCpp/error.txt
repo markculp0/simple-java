@@ -1,0 +1,23 @@
+
+Failed case #3/13: (Wrong answer) 
+
+got: 166.7 expected: 166.667 
+
+Input: 
+1 10 
+500 30 
+
+Your output: 166.7 
+
+Correct output: 166.667 
+
+(Time used: 0.01/1.00, memory used: 9629696/671088640.)
+
+---
+
+Failed case #6/13: Wrong answer 
+got: 10904.508 expected: 7777.731 
+
+(Time used: 0.00/1.00, memory used: 9641984/671088640.)
+
+---

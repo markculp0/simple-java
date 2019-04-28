@@ -14,13 +14,11 @@ using namespace std;
 double get_optimal_value(int capacity, vector<int> weights, vector<int> values) {
   double value = 0.0;
   int num_items = weights.size();
-  vector<double> wt_val(num_items);
   vector< pair <double, int> > mypair(num_items);
   
   // Calc weight value and store in pair vector
   for (int i = 0; i < num_items; ++i) {
-    wt_val[i] = (double)values[i] / (double)weights[i];
-    mypair[i].first = wt_val[i];
+    mypair[i].first = (double)values[i] / (double)weights[i];
     mypair[i].second = weights[i];
   }  
   
@@ -32,19 +30,23 @@ double get_optimal_value(int capacity, vector<int> weights, vector<int> values) 
     if (mypair[i].second <= capacity) {
       value = value + (mypair[i].first * mypair[i].second);
       capacity = capacity - mypair[i].second;
+      if (capacity < 0)
+        capacity = 0;
     } else {
       value = value + (mypair[i].first * capacity);
+      capacity = 0;
     }
   }
   
-/*  
+/* 
   // Debug  state: view inputs desc sort by value 
   for (int i = num_items - 1; i > -1; --i) {
     std::cout << fixed << setprecision(4) 
         << mypair[i].first << " " 
         << mypair[i].second << "\n";
   } 
-*/
+*/ 
+
 
   return value;
 }
@@ -62,7 +64,8 @@ int main() {
 
   double optimal_value = get_optimal_value(capacity, weights, values);
 
-  std::cout.precision(4);
-  std::cout << optimal_value << std::endl;
+  //std::cout.precision(4);
+  std::cout << fixed << setprecision(4) 
+      << optimal_value << std::endl;
   return 0;
 }
