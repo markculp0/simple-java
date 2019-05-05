@@ -27,7 +27,7 @@ Output:
 Sample 1
 Input:
 5
-23922
+2 3 9 2 2
 
 Output:
 1
@@ -36,7 +36,7 @@ Output:
 Sample 2
 Input: 
 4
-1234
+1 2 3 4
 
 Output: 
 0
@@ -45,7 +45,7 @@ Output:
 Sample 3
 Input: 
 4
-1231
+1 2 3 1
 
 Output:
 0
