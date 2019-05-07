@@ -1,3 +1,5 @@
+
+
 #include <iostream>
 #include <cassert>
 #include <vector>
@@ -29,8 +31,8 @@ int binSrch(const vector<int> &a, int l, int r, int x) {
   
 }  // end binSrch
 
-long long binSrchIt(const vector<long long> &a, int l, int r, long long x) {
-  long long mid;
+int binSrchIt(const vector<int> &a, int l, int r, int x) {
+  int mid;
   
   while (l <= r) {
     // mid = l + (r - l) / 2;
@@ -49,9 +51,9 @@ long long binSrchIt(const vector<long long> &a, int l, int r, long long x) {
 }
 
 // Call binary search function
-long long binary_search(const vector<long long> &a, long long x) {
+int binary_search(const vector<int> &a, int x) {
   int left = 0, right = (int)a.size(); 
-  long long result = 0;
+  int result = 0;
   
   result = binSrchIt(a, left, right, x);
   
@@ -69,27 +71,74 @@ int linear_search(const vector<int> &a, int x) {
 }
 
 int main() {
+  
+  while(true) {
+  
   int n;
+  int m;
   
+  std::vector<int> a;
+  int a1 = rand() % 100000;  // 100K
+  int a2 = a1 + (rand() % 1000000);  // 1M
+  int a3 = a2 + (rand() % 10000000 );  // 10M
+  int a4 = a3 + (rand() % 100000000 );  // 100M
+  int a5 = a4 + (rand() % 1000000000);  // 1B
+  a.push_back(a1);
+  a.push_back(a2);
+  a.push_back(a3);
+  a.push_back(a4);
+  a.push_back(a5);
+  n = a.size();
   
+  std::vector<int> b;
+  b.push_back(a3);
+  b.push_back(a5);
+  b.push_back(7);
+  b.push_back(a1);
+  b.push_back(a2);
+  m = b.size();
+  
+  /*
   std::cin >> n;
-  vector<long long> a(n);
+  vector<int> a(n);
   for (size_t i = 0; i < a.size(); i++) {
     std::cin >> a[i];
   }
-  int m;
+  
   std::cin >> m;
-  vector<long long> b(m);
+  vector<int> b(m);
   for (int i = 0; i < m; ++i) {
     std::cin >> b[i];
   }
+  */
+  
   for (int i = 0; i < m; ++i) {
     
     // Binary search
-    std::cout << binary_search(a, b[i]) << ' ';
+    // std::cout << binary_search(a, b[i]) << ' ';
+    int res1 = binary_search(a, b[i]);
     
     // Linear search
     // std::cout << linear_search(a, b[i]) << ' ';
+    int res2 = linear_search(a, b[i]);
+    
+    if (res1 != res2) {
+      std::cout << "Wrong answer: " << res1 << " " << res2 << "\n";
+
+      // Print vector a
+      for (size_t i = 0; i < a.size(); i++) {
+        std::cout << a[i] << " ";
+      }
+      std::cout << '\n';
+      
+      break;
+    }
+    else {
+      std::cout << "OK\n";
+    }
   }
   std::cout << '\n';
-}
+  
+  } // end while
+  
+} // end main

@@ -3,7 +3,15 @@
 
 # Build Help
 
+// Binary searches: Iterative and Recursive
 g++ -pipe -O2 -std=c++14 binary_search.cpp -lm
+
+// Stress test formulation
+g++ -pipe -O2 -std=c++14 stress.cpp -lm
+
+// Run stress test: compare linear search 
+// and binary search
+g++ -pipe -O2 -std=c++14 binSrchStressTest.cpp -lm
 
 ***
 
@@ -54,7 +62,37 @@ Input:
 Output:
 0 4 2 -1 5 3
 
+---
+Sample 4
+
+Input:
+5 10 20000 1500000 100000000 300000000
+5 4 1500000 11 300000000 10
+
+Output:
+-1 2 -1 4 0
+---
+Sample 5
+
+Input:        300M      500M      900M
+5 1000 2000 300000000 500000000 900000000 
+5 300000000 2000 35000000 500000000 1000
+
+Output:
+2 1 -1 3 0
+
+---
+Sample 5
+
+Input: 
+5  999999996 999999997 999999998 999999999 1000000000
+5  999999999 999999996 999999997 1000000000 5
+
+Output:
+3 0 1 4 -1
+    
 </pre>
+
 
 ***
 
