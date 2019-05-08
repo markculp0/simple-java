@@ -11,3 +11,6 @@ A collection of simple Java Apps
 7. Money Change
 8. Fractional Knapsack
 9. Car Fuel
+10. Binary Search
+11. Majority Elements
+12. Quick Sort
