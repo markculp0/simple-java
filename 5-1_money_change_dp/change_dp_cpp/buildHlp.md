@@ -7,7 +7,7 @@ g++ -pipe -O2 -std=c++14 change_dp.cpp -lm
 
 ***
 
-Apply dynamic programming to solve the Money Change Problem to minimize number of coins for coin denominations 1, 3, and 4.
+Solve the minimum number of coins to change m for denominations 1, 3, and 4.
 
 Constraints: 1 ≤ money ≤ 10^3 
 

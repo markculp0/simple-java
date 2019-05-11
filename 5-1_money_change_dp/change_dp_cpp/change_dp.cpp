@@ -26,6 +26,12 @@ int get_change(int m) {
       } // end if
     } // inner for
   } // outer for
+  
+  // View money, coins
+  for (int i = 1; i <= m; i++){
+    std::cout << minCoins[i] << " ";
+  }
+  std::cout << std::endl;
    
   return minCoins[m];
 }
