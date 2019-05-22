@@ -2,4 +2,8 @@
 a.exe
 a.out
 *.class
+.project
+.classpath
+.settings
+bin/
 
