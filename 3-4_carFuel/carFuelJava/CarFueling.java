@@ -23,7 +23,6 @@ public class CarFueling {
         //	  System.out.print(stopsAll[i] + " ");
         // System.out.println();
         
-        
         while (curRefill < n - 1) {
         	lastRefill = curRefill;        	
         	while (curRefill < n - 1 && 
@@ -36,8 +35,6 @@ public class CarFueling {
             if (curRefill < n - 1)
                 numRefills = numRefills + 1;
         } // outer while
-        
-        
         
         return numRefills;
     } // end computeMinRefills
